@@ -9,7 +9,7 @@ Requirements:
 - Topic and Qrels files for TREC1-8, WebTrack 2009-2013 (on TREC site)
 - Maven
 
-Assuming you are setting up on a gateway server, from which you can directly access the Hadoop cluster.
+The results can either be replicated using version 0.23, which can be downloaded along with the sources from Maven Central. Here, we will discuss an easier setup using the latest snapshot version from trunk. We also assume you are setting up on a gateway server, from which you can directly access the Hadoop cluster.
 
 Getting started:
 
