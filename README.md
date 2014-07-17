@@ -8,7 +8,8 @@ Requirements:
 - Collections TREC1-8 adhoc, ClueWeb09, ClueWeb12
 - Topic and Qrels files for TREC1-8, WebTrack 2009-2013 (on TREC site)
 - Maven
-- Assuming you are setting up on a gateway server, from which you can directly access the Hadoop cluster.
+
+Assuming you are setting up on a gateway server, from which you can directly access the Hadoop cluster.
 
 Getting started:
 
