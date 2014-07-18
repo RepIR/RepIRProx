@@ -39,11 +39,11 @@ Getting started:
 
 The structure of files could look like:
 
-`
-+-- RepIRProx   master pom & resources
+<pre>
++-- RepIRProx   master pom & resources 
 +-- RepIR       core lib
 +-- RepIRTools
-`
+</pre>
 
 If this was successful, you can try other test collections. `rr/settings` contains the settings we used for TREC1-8 and WebTrack 2009-2013, but you need to supply the collection and download the topic and qrel files yourself. You will have to modify the configuration files for any environment dependent settings. To replicate the exact results from our study, you can setup variants of configuration files like `trec1sdm` which have a corresponding file in `rr/settings/tuned` that contains the parameter settings obtained through cross validation (see paper).
 
