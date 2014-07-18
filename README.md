@@ -16,7 +16,7 @@ Getting started:
 1. Do not create the directories yet, but below the getting started is a tree that indicates what goes where. 
 2. In current folder of your choice `.`, clone the repositories for $FILE={RepIRProx, RepIRTools, RepIR, RepIRApps, RepIRProximity} with `git clone git://github.com/RepIR/$FILE.git`.
 3. `tar -zxvf RepIRProx/rr.tar.gz`, which gives you a directory `rr` in which RepIR stores the files used on the gateway.
-4. `tar -zxvf RepIRProx/bin.tar.gz`, in some place that you include in your $PATH. You mostly need `rr` and `rrconfig` to launch MR jobs with RepIR, but there are some other tools included for your convenience/for example.
+4. `tar -zxvf RepIRProx/bin.tar.gz`, in some place that you include in your $PATH. You mostly need `rr` and `rrconfig` to launch MR jobs with RepIR, but there are some other tools included for your convenience and as examples.
 5. Let $VERSION be the version of RepIR you cloned. Then to build the jars:
    - Open `RepIRProx/pom.xml`, and look for `hadoop.core`. Modify the version to whatever version of Hadoop you use.
    - `cd RepIRProx` which contains the parent pom.
