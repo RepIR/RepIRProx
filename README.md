@@ -13,7 +13,14 @@ The results can either be replicated using version 0.23, which can be downloaded
 
 Getting started:
 
-1. Download `rr.tar.gz`, and unpack this using `tar -zxvf rr.tar.gz`, which gives you a directory `rr` in which RepIR stores its files on the gateway.
+1. In a folder, we will clone the RepIR repository, to build the required jar files. In a folder of your choosing, download the parent pom with resource `git clone git@github.com:RepIR/RepIRProx.git`.
+2. Do not create the directories yet, but in the end the directory structure will look like:
+.
++-- RepIRProx   master pom & resources
++-- RepIR       core lib
++-- RepIRTools
+2. Open `RepIRProx/pom.xml`, and look for `hadoop.core`. Modify the version to whatever version of Hadoop you use. 
+2. Download `rr.tar.gz`, and unpack this using `tar -zxvf rr.tar.gz`, which gives you a directory `rr` in which RepIR stores its files on the gateway.
 2. Download `bin.tar.gz`, and unpack this using `tar -zxvf bin.tar.gz`, in some place that you include in your $PATH. You mostly need `rr` and `rrconfig` to launch MR jobs, but there are a few additional tools included.
 3. The tools in the bin are made for MR. If you use MR2, in `hd` you probably want to replace `hadoop` by `yarn`, and in `dfs` you replace `hd` by `hdfs`. 
 4. Now we will download the RepIR libraries with git, and use maven to compile, and copy the jars RepIRTools, RepIR, RepIRApps and RepIRProximity to `rr/lib/$VERSION` and the jars of the dependencies in `rr/lib/libs`. Let $VERSION be the latest RepIR version in trunk, then repeat the following for `$FILE = {RepIRTools, RepIR, RepIRApps, RepIRProximity}`:
