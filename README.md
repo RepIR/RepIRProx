@@ -38,11 +38,20 @@ Getting started:
 12. For IR experiments, you can easily execute test sets over MR. For the tiny collection, we have created am example topics and qrels file in `rr/adhoc`. These are flat text files, but to ensure you have correctly modified the configuration files to your local settings, you can view the topics with `showtopics tiny`. When that works, you can run the set of topics on the cluster `testset tiny kld`. When the job is finished you should have a results file `rr/eval/tiny.kld`. You can compute the map score for the results file `map tiny kld`.  
 
 The structure of files could look like:
-
 <pre>
-+-- RepIRProx   master pom & resources 
-+-- RepIR       core lib
-+-- RepIRTools
++-- RepIRProx        master pom & resources 
++-- RepIR            core lib
++-- RepIRTools       low level tools used by RepIR
++-- RepIRApps        end user tools and apps
++-- RepIRProximity   implementations of proximity models for "Distance Matters!"
++-- rr               
+|   +-- settings     configuration files
+|   +-- adhoc        topics and qrels
+|   +-- eval         result files for test batches
+|   +-- lib          jar files
+|       +-- $VERSION RepIR jar files
+|       +-- libs     jars of dependencies
++-- bin              command line tools to operate RepIR
 </pre>
 
 If this was successful, you can try other test collections. `rr/settings` contains the settings we used for TREC1-8 and WebTrack 2009-2013, but you need to supply the collection and download the topic and qrel files yourself. You will have to modify the configuration files for any environment dependent settings. To replicate the exact results from our study, you can setup variants of configuration files like `trec1sdm` which have a corresponding file in `rr/settings/tuned` that contains the parameter settings obtained through cross validation (see paper).
