@@ -15,10 +15,6 @@ Getting started:
 
 1. In a folder, we will clone the RepIR repository, to build the required jar files. In a folder of your choosing, download the parent pom with resource `git clone git@github.com:RepIR/RepIRProx.git`.
 2. Do not create the directories yet, but in the end the directory structure will look like:
-.
-+-- RepIRProx   master pom & resources
-+-- RepIR       core lib
-+-- RepIRTools
 2. Open `RepIRProx/pom.xml`, and look for `hadoop.core`. Modify the version to whatever version of Hadoop you use. 
 2. Download `rr.tar.gz`, and unpack this using `tar -zxvf rr.tar.gz`, which gives you a directory `rr` in which RepIR stores its files on the gateway.
 2. Download `bin.tar.gz`, and unpack this using `tar -zxvf bin.tar.gz`, in some place that you include in your $PATH. You mostly need `rr` and `rrconfig` to launch MR jobs, but there are a few additional tools included.
@@ -40,6 +36,13 @@ Getting started:
 10. Now create the index, using `hdindex tiny`. After the Hadoop job finishes successfully, there will be features added to the repository.
 11. Now you are ready to try it out. For tiny repositories, there is a fast retrieval tool for test purposes that does not use MapReduce. `qq tiny Albert Einstein`, by default returns the top-10 documents using a Dirichlet smoothed Language Model.
 12. For IR experiments, you can easily execute test sets over MR. For the tiny collection, we have created am example topics and qrels file in `rr/adhoc`. These are flat text files, but to ensure you have correctly modified the configuration files to your local settings, you can view the topics with `showtopics tiny`. When that works, you can run the set of topics on the cluster `testset tiny kld`. When the job is finished you should have a results file `rr/eval/tiny.kld`. You can compute the map score for the results file `map tiny kld`.  
+
+The structure of files could look like:
+.
++-- RepIRProx   master pom & resources
++-- RepIR       core lib
++-- RepIRTools
+
 
 If this was successful, you can try other test collections. `rr/settings` contains the settings we used for TREC1-8 and WebTrack 2009-2013, but you need to supply the collection and download the topic and qrel files yourself. You will have to modify the configuration files for any environment dependent settings. To replicate the exact results from our study, you can setup variants of configuration files like `trec1sdm` which have a corresponding file in `rr/settings/tuned` that contains the parameter settings obtained through cross validation (see paper).
 
