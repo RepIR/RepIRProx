@@ -38,6 +38,7 @@ Getting started:
 12. For IR experiments, you can easily execute test sets over MR. For the tiny collection, we have created am example topics and qrels file in `rr/adhoc`. These are flat text files, but to ensure you have correctly modified the configuration files to your local settings, you can view the topics with `showtopics tiny`. When that works, you can run the set of topics on the cluster `testset tiny kld`. When the job is finished you should have a results file `rr/eval/tiny.kld`. You can compute the map score for the results file `map tiny kld`.  
 
 The structure of files could look like:
+
 .
 +-- RepIRProx   master pom & resources
 +-- RepIR       core lib
