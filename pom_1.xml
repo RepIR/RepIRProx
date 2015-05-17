@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.repir</groupId>
     <artifactId>RepIRProx</artifactId>
-    <version>0.26-SNAPSHOT</version>
+    <version>0.25-SNAPSHOT</version>
     <packaging>pom</packaging>
     <url>http://repir.github.io</url>
     
@@ -63,12 +63,6 @@
             <id>createrelease</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>nbm-maven-plugin</artifactId>
-                        <version>3.14</version>
-                        <extensions>true</extensions>
-                    </plugin>
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>versions-maven-plugin</artifactId>
